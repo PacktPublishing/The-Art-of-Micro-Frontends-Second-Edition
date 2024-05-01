@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="./product-page.css">
+<h1 id="store">The Model Store</h1>
+<esi:include src="/mf-blue/basket-info?sku=<%= current.sku %>" />
+<div id="image">
+  <div>
+    <img src="./images/<%= current.image %>" alt="<%= current.name %>" />
+  </div>
+</div>
+<h2 id="name">
+  <%= product.name %> <small><%= current.name %></small>
+</h2>
+<div id="options">
+  <% product.variants.forEach(variant => { %>
+    <a href="./product-page?sku=<%= variant.sku %>">
+      <button class="<%= current.sku === variant.sku ? 'active' : '' %>" type="button">
+        <img src="./images/<%= variant.thumb %>" alt="<%= variant.name %>" />
+      </button>
+    </a>
+  <% }); %>
+</div>
+<esi:include src="/mf-blue/buy-button?sku=<%= current.sku %>" />
+<esi:include src="/mf-green/recommendations?sku=<%= current.sku %>" />

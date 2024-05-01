@@ -1,0 +1,21 @@
+{
+  "name": "service-feed",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "serve": "pm2-runtime src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "connect-busboy": "0.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mime-types": "^2.1.24",
+    "pm2": "^4.5.5",
+    "tar": "^4.4.10"
+  },
+  "devDependencies": {}
+}

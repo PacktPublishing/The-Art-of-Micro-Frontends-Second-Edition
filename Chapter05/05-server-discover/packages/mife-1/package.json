@@ -1,0 +1,27 @@
+{
+  "name": "@aom/mife-1",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Florian Rappl <florian.rappl@smapiot.com>",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "serve": "node lib/index.js",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  }
+}

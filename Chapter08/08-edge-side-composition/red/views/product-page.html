@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tractor Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/red/style.css" rel="stylesheet">
+    <link href="/red/product-page.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <h1 id="store">The Model Store</h1>
+      <!--# include virtual="/blue/basket-info?sku=<%= current.sku %>" -->
+      <div id="image">
+        <div>
+          <img src="/red/images/<%= current.image %>" alt="<%= current.name %>" />
+        </div>
+      </div>
+      <h2 id="name">
+        <%= product.name %> <small><%= current.name %></small>
+      </h2>
+      <div id="options">
+        <% product.variants.forEach(variant => { %>
+          <a href="/red/product-page?sku=<%= variant.sku %>">
+            <button class="<%= current.sku === variant.sku ? 'active' : '' %>" type="button">
+              <img src="/red/images/<%= variant.thumb %>" alt="<%= variant.name %>" />
+            </button>
+          </a>
+        <% }); %>
+      </div>
+      <!--# include virtual="/blue/buy-button?sku=<%= current.sku %>" -->
+      <!--# include virtual="/green/recommendations?sku=<%= current.sku %>" -->
+    </div>
+  </body>
+</html>

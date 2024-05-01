@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MF-1</title>
+<style>
+iframe {
+  width: 100%;
+  border: 1px dashed red;
+}
+</style>
+</head>
+<body>
+<h1>This is microfrontend 2.</h1>
+<a href="/mf1">Go to MF1</a>
+<p>Here is a fragment.</p>
+<iframe src="/mf1/fragment" frameborder="0"></iframe>
+<p>Notice that the fragment (red dashed border) is well resized.</p>
+<script src="https://unpkg.com/iframe-resizer@4.2.11/js/iframeResizer.min.js"></script>
+<script>
+iFrameResize({ log:true });
+</script>
+</body>
+</html>

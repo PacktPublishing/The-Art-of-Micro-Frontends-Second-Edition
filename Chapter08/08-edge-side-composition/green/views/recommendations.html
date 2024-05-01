@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="/green/recommendations.css">
+<div class="green-recos" id="reco">
+  <h3>Related Products</h3>
+  <% recommendations.forEach(recommendation => { %>
+    <img src="/green/images/reco_<%= recommendation %>.jpg" alt="Recommendation <%= recommendation %>">
+  <% }); %>
+</div>

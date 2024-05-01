@@ -1,0 +1,22 @@
+{
+  "name": "mf-red",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "http-server dist --port 2001",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "http-server": "^0.12.3",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

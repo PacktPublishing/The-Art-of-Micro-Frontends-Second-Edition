@@ -1,0 +1,21 @@
+{
+  "name": "tax",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "webpack --mode production",
+    "build": "mkdir -p ../app-shell/dist/mfes/tax && npm run bundle && cp dist/* ../app-shell/dist/mfes/tax/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "svelte": "^3.32.3",
+    "svelte-loader": "^3.0.0",
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0"
+  }
+}
