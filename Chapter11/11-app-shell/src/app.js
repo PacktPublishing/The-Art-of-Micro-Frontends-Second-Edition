@@ -1,5 +1,3 @@
-import "regenerator-runtime/runtime";
-
 const appContentContainer = document.querySelector("#app-content");
 const feedUrl = "http://localhost:9000/modules";
 const registry = {};

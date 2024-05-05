@@ -23,7 +23,7 @@
   "dependencies": {
     "@aom/mife-1": "^0.0.0",
     "@aom/mife-2": "^0.0.0",
-    "express": "^4.17.1",
-    "pug": "^3.0.0"
+    "express": "^4.19.2",
+    "pug": "^3.0.2"
   }
 }

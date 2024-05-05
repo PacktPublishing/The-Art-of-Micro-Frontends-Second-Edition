@@ -21,7 +21,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.19.2",
     "http-proxy": "^1.18.1",
     "pug": "^3.0.0"
   }
