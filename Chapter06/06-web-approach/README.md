@@ -6,18 +6,12 @@ The following software is required to run the sample:
 
 - Git
 - Node.js
-- NPM
+- npm
 - Bash
 
 ## Running
 
-Clone the repository:
-
-```sh
-git clone https://github.com/ArtOfMicrofrontends/06-web-approach.git
-```
-
-Go to the repository's directory and run NPM install in each subdirectory:
+Go to the current directory and run NPM install in each subdirectory:
 
 ```sh
 cd mf-1
@@ -43,7 +37,7 @@ Now start the application:
 
 Follow these steps to implement the same from scratch.
 
-1. Create the microfrontends
+1. Create the micro frontends
 
 ```sh
 mkdir mf-1 && cd mf-1 && npm init -y && cd ..
@@ -80,7 +74,7 @@ cd mf-2 && npm i http-server --save-dev && cd ..
 <title>MF-1</title>
 </head>
 <body>
-<h1>This is microfrontend 1.</h1>
+<h1>This is micro frontend 1.</h1>
 <a href="/mf2">Go to MF2</a>
 </body>
 </html>
@@ -122,11 +116,11 @@ Object.keys(targets).forEach((prefix) => {
 app.get("*", (_, res) => res.status(404).send("Page not found."));
 
 app.listen(port, () => {
-  console.log(`Microfrontend gateway running at ${port}.`);
+  console.log(`Micro Frontend gateway running at ${port}.`);
 });
 ```
 
-7. Add code to run all microfrontends and the gateway.
+7. Add code to run all micro frontends and the gateway.
 
 ```sh
 echo "#!/bin/bash" > run.sh

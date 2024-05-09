@@ -9,7 +9,7 @@ app.get("/", (_, res) => {
   res.render("index", { title: "Sample", message: "Index" });
 });
 
-// set up the microfrontends
+// set up the micro frontends
 require("@aom/mife-1")(app);
 require("@aom/mife-2")(app);
 

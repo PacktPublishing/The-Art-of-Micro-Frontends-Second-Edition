@@ -6,18 +6,12 @@ The following software is required to run the sample:
 
 - Git
 - Node.js
-- NPM
+- npm
 - Bash
 
 ## Running
 
-Clone the repository:
-
-```sh
-git clone https://github.com/ArtOfMicrofrontends/09-client-side-composition.git
-```
-
-Go to the repository's directory and start the application, which installs also all dependencies:
+Go to the current directory and start the application, which installs also all dependencies:
 
 ```sh
 ./run.sh
@@ -48,9 +42,9 @@ npm i http-server --save-dev
 
 4. Run the HTTP server, e.g., `http-server ./public --port 1234`
 
-5. Now create the MFs, e.g., the red microfrontend
+5. Now create the MFs, e.g., the red micro frontend
 
-6. Create a directory for each microfrontend, initializing it as a new Node.js project:
+6. Create a directory for each micro frontend, initializing it as a new Node.js project:
 
 ```sh
 npm init -y
@@ -62,7 +56,7 @@ npm init -y
 npm i file-loader http-server style-loader webpack webpack-cli webpack-dev-server --save-dev
 ```
 
-8. Create a *webpack.config.js* as shown - keep in mind that the public path should be set to the path of the server exposing the microfrontend (e.g., `http://localhost:2001/` for red)
+8. Create a *webpack.config.js* as shown - keep in mind that the public path should be set to the path of the server exposing the micro frontend (e.g., `http://localhost:2001/` for red)
 
 9. Write the MFs in form of custom web components such as
 

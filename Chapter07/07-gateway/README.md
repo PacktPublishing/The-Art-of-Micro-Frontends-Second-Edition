@@ -6,17 +6,11 @@ The following software is required to run the sample:
 
 - Git
 - Node.js
-- NPM
+- npm
 
 ## Running
 
-Clone the repository:
-
-```sh
-git clone https://github.com/ArtOfMicrofrontends/07-gateway.git
-```
-
-Go to the repository's directory and run NPM install:
+Go to the current directory and run NPM install:
 
 ```sh
 npm install
@@ -52,4 +46,4 @@ npm i axios cheerio express nodesi ejs
 
 6. Run server
 
-7. Start microfrontends (blue, green, red)
+7. Start micro frontends (blue, green, red)

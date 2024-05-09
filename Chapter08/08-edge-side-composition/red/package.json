@@ -1,7 +1,7 @@
 {
   "name": "mf-red",
   "version": "1.0.0",
-  "description": "Microfrontend for the product information.",
+  "description": "Micro Frontend for the product information.",
   "main": "lib/index.js",
   "scripts": {
     "start": "node lib/index.js",

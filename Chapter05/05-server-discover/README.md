@@ -6,17 +6,11 @@ The following software is required to run the sample:
 
 - Git
 - Node.js
-- NPM
+- npm
 
 ## Running
 
-Clone the repository:
-
-```sh
-git clone https://github.com/ArtOfMicrofrontends/05-server-discover.git
-```
-
-Go to the repository's directory and run NPM install:
+Go to the current directory and run NPM install:
 
 ```sh
 npm install
@@ -44,7 +38,7 @@ npm init -y
 npx lerna init
 ```
 
-3. Add an application gateway and two microfrontends:
+3. Add an application gateway and two micro frontends:
 
 ```sh
 npx lerna create @aom/app --yes
@@ -99,10 +93,10 @@ html
     title= title
   body
     h1= message
-    p In microfrontend 1.
+    p In micro frontend 1.
 ```
 
-10. Call the views from the microfrontends. Here, we can keep the path relative:
+10. Call the views from the micro frontends. Here, we can keep the path relative:
 
 ```js
 res.render('index', { title: "Sample", message: "MF1" });

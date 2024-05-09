@@ -1,7 +1,7 @@
 {
   "name": "mf-blue",
   "version": "1.0.0",
-  "description": "Microfrontend for the basket management.",
+  "description": "Micro Frontend for the basket management.",
   "main": "lib/index.js",
   "scripts": {
     "start": "node lib/index.js",

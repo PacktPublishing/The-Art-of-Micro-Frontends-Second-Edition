@@ -6,18 +6,12 @@ The following software is required to run the sample:
 
 - Git
 - Node.js
-- NPM
+- npm
 - Bash
 
 ## Running
 
-Clone the repository:
-
-```sh
-git clone https://github.com/ArtOfMicrofrontends/10-spa-composition.git
-```
-
-Go to the repository's directory and start the application, which also installs all required package dependencies:
+Go to the current directory and start the application, which also installs all required package dependencies:
 
 ```sh
 ./run.sh

@@ -24,5 +24,5 @@ Object.keys(targets).forEach((prefix) => {
 app.get("*", (_, res) => res.status(404).send("Page not found."));
 
 app.listen(port, () => {
-  console.log(`Microfrontend gateway running at ${port}.`);
+  console.log(`Micro Frontend gateway running at ${port}.`);
 });

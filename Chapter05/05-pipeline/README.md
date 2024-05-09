@@ -6,17 +6,11 @@ The following software is required to run the sample:
 
 - Git
 - Node.js
-- NPM
+- npm
 
 ## Running
 
-Clone the repository:
-
-```sh
-git clone https://github.com/ArtOfMicrofrontends/05-pipeline.git
-```
-
-Go to the repository's directory and run NPM install:
+Go to the current directory and run NPM install:
 
 ```sh
 npm install
@@ -50,7 +44,7 @@ npx lerna init
 npx lerna create @aom/app --yes
 ```
 
-4. Add two microfrontends:
+4. Add two micro frontends:
 
 ```sh
 npx lerna create @aom/mife-1 --yes
@@ -86,7 +80,7 @@ app.get("/", (_, res) => {
 });
 ```
 
-8. Add an integration point in each microfrontend, e.g.,
+8. Add an integration point in each micro frontend, e.g.,
 
 ```js
 "use strict";
@@ -100,7 +94,7 @@ function mife1(app) {
 }
 ```
 
-9. Integrate the microfrontend in the app:
+9. Integrate the micro frontend in the app:
 
 ```js
 require('@aom/mife-1')(app);
@@ -126,10 +120,10 @@ html
     title= title
   body
     h1= message
-    p In microfrontend 1.
+    p In micro frontend 1.
 ```
 
-12. Call the views from the microfrontends. Keep the path absolute:
+12. Call the views from the micro frontends. Keep the path absolute:
 
 ```js
 const page = require.resolve('../views/index.pug');

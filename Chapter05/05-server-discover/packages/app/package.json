@@ -17,6 +17,7 @@
     "access": "public"
   },
   "scripts": {
+    "app": "node lib/app.js",
     "serve": "node lib/app.js",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },

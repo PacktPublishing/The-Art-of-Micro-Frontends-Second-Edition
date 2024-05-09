@@ -1,7 +1,7 @@
 {
   "name": "07-gateway",
   "version": "1.0.0",
-  "description": "Gateway to aggregate the microfrontends.",
+  "description": "Gateway to aggregate the micro frontends.",
   "main": "lib/index.js",
   "scripts": {
     "start": "node lib/index.js",

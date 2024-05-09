@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "start": "lerna run app",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +14,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lerna": "^7"
+    "lerna": "^6.4.1"
   }
 }

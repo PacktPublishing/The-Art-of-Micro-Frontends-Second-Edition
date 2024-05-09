@@ -1,7 +1,7 @@
 {
   "name": "mf-green",
   "version": "1.0.0",
-  "description": "Microfrontend to display related product.",
+  "description": "Micro Frontend to display related product.",
   "main": "lib/index.js",
   "scripts": {
     "start": "node lib/index.js",

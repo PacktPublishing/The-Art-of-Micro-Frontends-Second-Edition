@@ -10,13 +10,7 @@ The following software is required to run the sample:
 
 ## Running
 
-Clone the repository:
-
-```sh
-git clone https://github.com/ArtOfMicrofrontends/11-frontend-tax.git
-```
-
-Go to the repository's directory and run NPM install:
+Go to the current directory and run NPM install:
 
 ```sh
 npm install

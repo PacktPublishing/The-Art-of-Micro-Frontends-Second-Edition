@@ -6,19 +6,13 @@ The following software is required to run the sample:
 
 - Git
 - Node.js
-- NPM
+- npm
 - Bash
 - Docker
 
 ## Running
 
-Clone the repository:
-
-```sh
-git clone https://github.com/ArtOfMicrofrontends/08-edge-side-composition.git
-```
-
-Go to the repository's directory and run the application:
+Go to the current directory and run the application:
 
 ```sh
 ./run.sh
@@ -42,7 +36,7 @@ Follow these steps to implement the same from scratch.
 
 6. Fill it with a Dockerfile using the `nginx:latest` image containing a local *nginx.conf* configuration file
 
-7. In the server have a section for each MF, e.g., for the red microfrontend you should have
+7. In the server have a section for each MF, e.g., for the red micro frontend you should have
 
 ```
 location /red {
@@ -60,7 +54,7 @@ location /red {
 
 Change the URLs of the MFs respectively. In the sample we refer to `host.docker.internal` to access `localhost` from the Docker container.
 
-8. Modify the used ESI tags with SSI, e.g., in the red microfrontend replace
+8. Modify the used ESI tags with SSI, e.g., in the red micro frontend replace
 
 ```html
 <esi:include src="/mf-blue/buy-button?sku=<%= current.sku %>" />
