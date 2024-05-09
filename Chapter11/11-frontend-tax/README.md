@@ -6,11 +6,11 @@ The following software is required to run the sample:
 
 - Git
 - Node.js
-- NPM
+- npm
 
 ## Running
 
-Go to the current directory and run NPM install:
+Go to the current directory and run npm install:
 
 ```sh
 npm install

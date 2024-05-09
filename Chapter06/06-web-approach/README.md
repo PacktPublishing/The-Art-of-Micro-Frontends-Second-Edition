@@ -11,7 +11,7 @@ The following software is required to run the sample:
 
 ## Running
 
-Go to the current directory and run NPM install in each subdirectory:
+Go to the current directory and run npm install in each subdirectory:
 
 ```sh
 cd mf-1
@@ -97,8 +97,8 @@ const app = express();
 const port = process.env.PORT || 1234;
 
 const targets = {
-  "/mf1": "http://localhost:2001",
-  "/mf2": "http://localhost:2002",
+  "/mf1": "http://localhost:2001/mf1",
+  "/mf2": "http://localhost:2002/mf2",
 };
 
 app.get("/", (_, res) => res.redirect(Object.keys(targets)[0]));
