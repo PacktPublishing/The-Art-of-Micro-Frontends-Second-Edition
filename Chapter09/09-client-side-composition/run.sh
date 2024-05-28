@@ -2,6 +2,10 @@
 
 MFs=('blue' 'green' 'red')
 
+cd app
+npm install
+cd ..
+
 for MF in "${MFs[@]}"
 do
   cd $MF

@@ -162,7 +162,7 @@ window.addEventListener("hashchange", urlChanged);
 window.addEventListener("popstate", urlChanged);
 
 import("./scripts.json").then((scripts) =>
-  scripts.forEach((url) => {
+  scripts.default.forEach((url) => {
     const script = document.createElement("script");
     script.src = url;
     document.body.appendChild(script);
