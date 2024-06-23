@@ -46,7 +46,7 @@ app.use(express.static("public"));
 app.get("/product-page", (req, res) => {
   const sku = req.query.sku || "porsche";
   const current =
-    product.variants.filter((v) => v.sku === sku)[0] || product.variants[0];
+    product.variants.find((v) => v.sku === sku) || product.variants[0];
 
   res.render("product-page", {
     product,

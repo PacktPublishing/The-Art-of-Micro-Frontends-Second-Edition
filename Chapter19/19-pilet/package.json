@@ -1,0 +1,37 @@
+{
+  "name": "my-pilet",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "pilet"
+  ],
+  "devDependencies": {
+    "sample-piral": "1.5.6",
+    "reactstrap": "8.10.1",
+    "tslib": "2.5.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router": "5.3.4",
+    "react-router-dom": "5.3.4",
+    "piral-cli": "1.5.6",
+    "piral-cli-webpack5": "1.5.6"
+  },
+  "scripts": {
+    "start": "pilet debug",
+    "build": "pilet build",
+    "upgrade": "pilet upgrade",
+    "upgrade-pilet": "pilet upgrade --force-overwrite yes"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "importmap": {
+    "imports": {},
+    "inherit": [
+      "sample-piral"
+    ]
+  },
+  "dependencies": {},
+  "source": "src/index.jsx"
+}

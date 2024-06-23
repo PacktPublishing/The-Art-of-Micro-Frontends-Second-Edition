@@ -2,9 +2,9 @@
 const path = require("path");
 const express = require("express");
 
-module.exports = mife1;
+module.exports = setupMicrofrontend1;
 
-function mife1(app) {
+function setupMicrofrontend1(app) {
   app.use("/mf1", express.static(path.join(__dirname, "..", "public")));
 
   app.get("/mf1", (_, res) => {
