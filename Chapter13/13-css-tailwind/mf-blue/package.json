@@ -1,0 +1,44 @@
+{
+  "name": "mf-blue",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "pilet"
+  ],
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "autoprefixer": "^10.4.14",
+    "esbuild-style-plugin": "^1.6.2",
+    "piral-cli": "1.0.0",
+    "piral-cli-esbuild": "next",
+    "postcss": "^8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router": "5.3.3",
+    "react-router-dom": "5.3.3",
+    "reactstrap": "8.10.1",
+    "sample-piral": "1.0.1",
+    "tailwindcss": "^3.3.2",
+    "tslib": "2.5.2",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "start": "pilet debug",
+    "build": "pilet build",
+    "upgrade": "pilet upgrade",
+    "upgrade-pilet": "pilet upgrade --force-overwrite yes"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "importmap": {
+    "imports": {},
+    "inherit": [
+      "sample-piral"
+    ]
+  },
+  "source": "src/index.tsx"
+}

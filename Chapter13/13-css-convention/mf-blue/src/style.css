@@ -1,0 +1,20 @@
+.mf-blue-tile-background {
+  background: blue;
+  color: yellow;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2.mf-blue {
+  color: blue;
+}
+
+output.mf-blue {
+  border: 1px dashed blue;
+  background: #ccc;
+  color: #555;
+  padding: 1rem;
+  font-weight: bold;
+}
