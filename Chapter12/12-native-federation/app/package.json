@@ -1,0 +1,25 @@
+{
+  "name": "host-direct",
+  "version": "1.0.0",
+  "description": "App shell using direct / known imports",
+  "keywords": [],
+  "author": "Florian Rappl",
+  "license": "MIT",
+  "scripts": {
+    "start": "vite --port 1234",
+    "preview": "npx http-server dist --port 1234 --cors",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "@softarc/native-federation": "^2.0.9"
+  },
+  "devDependencies": {
+    "@module-federation/vite": "^0.2.8",
+    "@softarc/native-federation-esbuild": "^2.0.9",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "typescript": "^5",
+    "vite": "^4.0.1"
+  }
+}
