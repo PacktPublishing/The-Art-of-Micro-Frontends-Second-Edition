@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import { Link } from "react-router-dom";
-import { jsx } from "@emotion/react";
+import { css, jsx } from "@emotion/react";
 import styled from "@emotion/styled";
 import type { PiletApi } from "sample-piral";
 
@@ -19,7 +19,7 @@ export function setup(app: PiletApi) {
   app.registerTile(
     () => (
       <div
-        css={`
+        css={css`
           background: red;
           color: white;
           flex: 1;
