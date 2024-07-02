@@ -8,17 +8,23 @@ The following software is required to run the sample:
 - Node.js
 - npm
 - Bash
-- Docker
+- Docker with Docker Compose
 
 ## Running
 
 Go to the current directory and run the application:
 
 ```sh
-./run.sh
+docker compose up
 ```
 
 Running the application will first install all required package dependencies.
+
+Once you closed the application you can also remove it using:
+
+```sh
+docker compose down
+```
 
 ## Steps
 
@@ -34,17 +40,23 @@ Follow these steps to implement the same from scratch.
 
 5. Create a new directory for the edge-side service
 
-6. Fill it with a Dockerfile using the `nginx:latest` image containing a local *nginx.conf* configuration file
+6. Fill it with a Dockerfile using the `nginx:latest` image containing a local *nginx.conf* configuration file:
+
+```dockerfile
+FROM nginx:latest
+
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+```
 
 7. In the server have a section for each MF, e.g., for the red micro frontend you should have
 
-```
+```nginx
 location /red {
     ssi on;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-NginX-Proxy true;
-    proxy_pass http://host.docker.internal:2001;
+    proxy_pass http://red:2001;
     proxy_ssl_session_reuse off;
     proxy_set_header Host $http_host;
     proxy_cache_bypass $http_upgrade;
@@ -52,7 +64,7 @@ location /red {
 }
 ```
 
-Change the URLs of the MFs respectively. In the sample we refer to `host.docker.internal` to access `localhost` from the Docker container.
+Change the URLs of the MFs respectively. In the sample we refer to `red` to access the `red` Docker container running within the Docker network.
 
 8. Modify the used ESI tags with SSI, e.g., in the red micro frontend replace
 
@@ -67,3 +79,44 @@ with
 ```
 
 9. Extend the fragment in the red MF to be a full HTML document
+
+10. Create a Dockerfile for each Micro Frontend, e.g., for the `red` micro frontend
+
+```dockerfile
+FROM node:slim
+
+ENV NODE_ENV development
+
+# Setting up the work directory
+WORKDIR /express-docker
+
+# Copying all the files in our project
+COPY . .
+
+# Installing dependencies
+RUN npm install
+
+# Starting our application
+CMD [ "node", "lib/index.js" ]
+
+# Exposing server port
+EXPOSE 2001
+```
+
+11. Create a `docker-compose.yml` that combines the different Docker containers into one micro service network:
+
+```yml
+services:
+  web:
+    build: ./edge
+    ports:
+      - "1234:80"
+  blue:
+    build: ./blue
+  green:
+    build: ./green
+  red:
+    build: ./red
+```
+
+**Note**: Only the edge layer is exposed to the outside (on port `1234`). All others are only accessible inside the Docker network using their respective container name and port (e.g., via `http://red:2001`).

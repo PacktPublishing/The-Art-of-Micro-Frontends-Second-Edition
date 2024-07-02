@@ -1,0 +1,11 @@
+services:
+  web:
+    build: ./edge
+    ports:
+      - "1234:80"
+  blue:
+    build: ./blue
+  green:
+    build: ./green
+  red:
+    build: ./red
