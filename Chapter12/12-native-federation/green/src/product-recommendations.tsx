@@ -11,16 +11,18 @@ import reco7 from "./images/reco_7.jpg";
 import reco8 from "./images/reco_8.jpg";
 import reco9 from "./images/reco_9.jpg";
 
+const baseUrl = 'http://localhost:2003';
+
 const recos = {
-  1: reco1,
-  2: reco2,
-  3: reco3,
-  4: reco4,
-  5: reco5,
-  6: reco6,
-  7: reco7,
-  8: reco8,
-  9: reco9,
+  1: `${baseUrl}${reco1}`,
+  2: `${baseUrl}${reco2}`,
+  3: `${baseUrl}${reco3}`,
+  4: `${baseUrl}${reco4}`,
+  5: `${baseUrl}${reco5}`,
+  6: `${baseUrl}${reco6}`,
+  7: `${baseUrl}${reco7}`,
+  8: `${baseUrl}${reco8}`,
+  9: `${baseUrl}${reco9}`,
 };
 
 const allRecommendations = {

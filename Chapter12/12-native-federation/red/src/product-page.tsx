@@ -8,6 +8,8 @@ import tractorRedThumb from "./images/tractor-red-thumb.jpg";
 import tractorBlueThumb from "./images/tractor-blue-thumb.jpg";
 import tractorGreenThumb from "./images/tractor-green-thumb.jpg";
 
+const baseUrl = 'http://localhost:2001';
+
 const product = {
   name: "Tractor",
   variants: [
@@ -15,24 +17,24 @@ const product = {
       sku: "porsche",
       color: "red",
       name: "Porsche-Diesel Master 419",
-      image: tractorRed,
-      thumb: tractorRedThumb,
+      image: `${baseUrl}${tractorRed}`,
+      thumb: `${baseUrl}${tractorRedThumb}`,
       price: "66,00 €",
     },
     {
       sku: "fendt",
       color: "green",
       name: "Fendt F20 Dieselroß",
-      image: tractorGreen,
-      thumb: tractorGreenThumb,
+      image: `${baseUrl}${tractorGreen}`,
+      thumb: `${baseUrl}${tractorGreenThumb}`,
       price: "54,00 €",
     },
     {
       sku: "eicher",
       color: "blue",
       name: "Eicher Diesel 215/16",
-      image: tractorBlue,
-      thumb: tractorBlueThumb,
+      image: `${baseUrl}${tractorBlue}`,
+      thumb: `${baseUrl}${tractorBlueThumb}`,
       price: "58,00 €",
     },
   ],
