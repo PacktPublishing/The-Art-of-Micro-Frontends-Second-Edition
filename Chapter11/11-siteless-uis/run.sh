@@ -2,7 +2,7 @@
 
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 
-cd 11-service-feed
+cd service-feed
 npm install
 npm start &
 cd ..
@@ -11,14 +11,14 @@ MFs=('balance' 'settings' 'tax')
 
 for MF in "${MFs[@]}"
 do
-  cd 11-frontend-$MF
+  cd frontend-$MF
   npm install
   npm run bundle
   npm run publish
   cd ..
 done
 
-cd 11-app-shell
+cd app-shell
 npm install
 npm start
 cd ..
