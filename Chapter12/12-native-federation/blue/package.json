@@ -25,6 +25,6 @@
     "@types/react-dom": "18.0.10",
     "esbuild-auto-path-plugin": "0.15.1",
     "typescript": "^5",
-    "vite": "^4.0.1"
+    "vite": "^4.5.5"
   }
 }
